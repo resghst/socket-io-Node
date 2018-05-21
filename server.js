@@ -53,8 +53,6 @@ serv_io.sockets.on('connection', function(socket) {
   let initplaylist ={ }
   setInterval(function() {
     fs.readFile( filepath , 'utf8', function(err, buffer){  initplaylist = JSON.parse(buffer) })
-    // var dateObj = {'reqdate': new Date()}
-    // dateObj.resdate =  new Date()
     socket.emit('date', initplaylist);
   }, 1000);
 
