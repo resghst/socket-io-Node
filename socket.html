@@ -8,7 +8,8 @@
       var socket = io.connect();
 
       socket.on('date', function(data) {
-        $('#date').text(data.date);
+        console.log(data)
+        $('#date').text(data.resdate);
       });
 
       $(document).ready(function(){
